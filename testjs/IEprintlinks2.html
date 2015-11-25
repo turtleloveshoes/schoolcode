@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<style>
+	.highlight{
+		border:orange 3px solid;
+		
+		}
+	.wordhighlight{
+		background:#FF0;
+		}
+
+</style>
+</head>
+<body leftmargin="20" topmargin="0">
+<a href="#" onclick="printLinksA();return false">PRINT LINK</a>
+<form action="#" method="post" enctype="multipart/form-data">
+	<input type="text" id="change"/><br/>
+    <input type="button" value="search" id="search_button" disable="disabled"/>
+</form>
+<form action="#" method="post" enctype="multipart/form-data">
+	Search: <input type="text" id="word"/><br/>
+    <!--<input type="button" value="Go"/>-->
+    <input type="submit" value="Go" id="submit" disable="disabled"/>
+
+</form>
+<div id='test'></div>
+
+<div id='resultlist'></div>
+
+<div id="SearchBox">
+ <p class="FM_Anchor"><a name="XREF_98100_Title_of_Chapter"></a>&nbsp;</p>
+ <p class="FM_ChapterNumber"><a name="TOC_Chapter_9"></a>Chapter 9</p>
+ <p class="FM_ChapterTitle"><a name="TOC_Authentication_Servers"></a><a name="XREF_63978_Authentication"></a>Authentication Servers</p>
+ <p class="FM_Body">The <?rh-udv_start name="OS"  ?>ArubaOS<?rh-udv_end ?>&#160;software allows you to use an external authentication server or the <?rh-udv_start name="C1-Controller"  ?>controller<?rh-udv_end ?>&#160;internal user database to authenticate clients who need to access the wireless network.</p>
+ <p class="FM_1Heading"><a name="TOC_Important_Points_to"></a>Important Points to Remember</p>
+ <ul type="disc" style="">
+  <li style="">
+  <p class="FM_Bullet1">In order for an external authentication server to process requests from the <?rh-udv_start name="CO1-CompanyShort"  ?>Aruba<?rh-udv_end ?>&#160;<?rh-udv_start name="C1-Controller"  ?>controller<?rh-udv_end ?>, you must configure the server to recognize the <?rh-udv_start name="C1-Controller"  ?>controller<?rh-udv_end ?>. Refer to the vendor documentation for information on configuring the authentication server. </p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1">Instructions on how to configure Microsoft’s IAS and Active Directory can be viewed at:</p>
+</li>
+ </ul>
+ <p class="FM_BodyinBulletStep">Microsoft’s IAS</p>
+ <p class="FM_BodyinBulletStep"><span class="FM_PMS646"><a href="http://technet2.microsoft.com/windowsserver/en/technologies/ias.mspx">http://technet2.microsoft.com/windowsserver/en/technologies/ias.mspx </span></a></p>
+ <p class="FM_BodyinBulletStep">Active Directory</p>
+ <p class="FM_BodyinBulletStep"><span class="FM_PMS646"><a href="http://technet2.microsoft.com/windowsserver/en/technologies/featured/ad/default.mspx">http://technet2.microsoft.com/windowsserver/en/technologies/featured/ad/default.mspx</span></a></p>
+ <p class="FM_Body">This chapter describes the following topics:</p>
+ <ul type="disc" style="">
+  <li style="">
+  <p class="FM_Bullet1"><a href="#XREF_93834_Servers_and_Server"><span class="FM_PMS646">“Servers and Server Groups”</span></a></p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1"><a href="#XREF_78268_Configuring_Servers"><span class="FM_PMS646">“Configuring Servers”</span></a></p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1"><a href="#XREF_89217_Adding_Users_to"><span class="FM_PMS646">“Internal Database”</span></a></p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1"><a href="#XREF_40223_Configuring_Server"><span class="FM_PMS646">“Server Groups”</span></a></p>
+</li>
+ </ul>
+ <p class="FM_1Heading"><a name="TOC_Servers_and_Server_Groups"></a><a name="XREF_93834_Servers_and_Server"></a>Servers and Server Groups</p>
+ <p class="FM_Body"><?rh-udv_start name="OS"  ?>ArubaOS<?rh-udv_end ?> supports the following external authentication servers:</p>
+ <ul type="disc" style="">
+  <li style="">
+  <p class="FM_Bullet1">RADIUS (Remote Authentication Dial-In User Service)</p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1">(Lightweight Directory Access Protocol)</p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1">TACACS+ (Terminal Access <?rh-udv_start name="C1-Controller"  ?>controller<?rh-udv_end ?> Access Control System)</p>
+</li>
+  <li style="">
+  <p class="FM_Bullet1">Windows (For stateful NTLM authentication)</p>
+</li>
+ </ul>
+ </div>
+<script src="../HERE/js/jquery.js" type="text/javascript"></script>
+<script src="../ArubaOS 6.0 Ugly Files/js/searchevent.js" type="text/javascript"></script>
+</body>
+</html>

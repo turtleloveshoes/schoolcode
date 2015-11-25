@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JQuery for Beginners</title>
+<script src="jquery-1.7.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+   $("p#par1").hide();
+   $("button#hide").hide();
+	$("button#show").click(function(){
+			$("p#par1").slideDown('medium');
+			$("button#show").hide();
+			$("button#hide").show();
+		});
+	$("button#hide").click(function(){
+			$("p#par1").hide();
+			$("button#show").show();
+			$("button#hide").hide();
+		});
+	$("img").mouseover(function(){
+			var src = $(this).attr("src");
+			$("div#intro#display").attr("src").replace("?:/[^/#?]+)+\.(?:jpg|gif|png)$", src);
+			
+		});
+ });
+
+</script>
+
+</head>
+
+<body>
+<button id="show">++</button>
+<button id="hide">--</button>
+Click button to read paragraph
+    <p id='par1' style="margin:0 auto; height:200px; padding:5px; display:block; background:hsla(0,100%,50%,0.4); border:grey solid 1px;">DATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATA</p>
+<p>DATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATADATA</p>
+<div id="gallery" style="width:500px; height:400px; background:hsla(230,100%,50%,0.4); border-radius:5px; -moz-border-radius:5px; -webkit-boder-radius:5px; border: solid black 1px; padding:10px">
+	<table width="300" border="0">
+  <tr>
+    <td><img id="display" src="images/health.jpg" alt="Smiley face" height="320" width="320" /></td>
+    <td>&nbsp;</td>
+  </tr>
+ 
+</table>
+
+    
+    <div id="intro" style="	clear: both;bottom:0;text-align:left;padding: 4px 0;background:#eee;background: -ms-linear-gradient(top, #EEEEEE 0%, #FFFFFF 100%);background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.75, #eee));background: -moz-linear-gradient(top, #eee, #fff);background-image: -ms-linear-gradient(top, #EEEEEE 0%, #FFFFFF 100%);background-image: -moz-linear-gradient(top, #EEEEEE 0%, #FFFFFF 100%);background-image: -o-linear-gradient(top, #EEEEEE 0%, #FFFFFF 100%);background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EEEEEE), color-stop(1, #FFFFFF); background-image: -webkit-linear-gradient(top, #EEEEEE 0%, #FFFFFF 100%);background-image: linear-gradient(to bottom, #EEEEEE 0%, #FFFFFF 100%);font-family:sans-serif; ;">
+    <img src="images/health.jpg" alt="Smiley face" height="42" width="42" />
+    <img src="images/health1.jpg" alt="Smiley face" height="42" width="42" />
+    <img src="images/health2.jpg" alt="Smiley face" height="42" width="42" />
+    </div>
+</div>
+</body>
+</html>

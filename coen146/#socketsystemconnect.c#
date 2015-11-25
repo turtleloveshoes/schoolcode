@@ -1,0 +1,74 @@
+vi #include<sys/socket.h>
+#include<netdb.h>
+#include<inet/in.h>
+ 
+/* Client
+ * Server hostname
+ * file you want to transfer
+ *
+ * Client sends file to the server and the server saves it on the server
+ * Client needs to map the host name of the server to the IP adress, built skt address DS, Create skt
+ * then send buffer data
+ * server then build the socket address
+ * bind skt fo an address
+ * recieve the data*/
+
+Structsofwckaddr_in { 
+	short sin_family;
+	 /* must be AF_INET */
+	 u_short sin_port;
+	 struct in_addr sin_addr;
+	 char sin_zero[8];
+	 /* Not used, must be zero */ 
+	};
+
+
+struct function(int arg, char *argv[]){
+  /*deal with file*/
+	FILE fp; 
+	char buf="";
+	if(fp=fopen(filename, 'r')==NULL)
+	  {
+	    error("file is NULL ");
+	  }
+	else
+	  {
+	    while(fp!=eof){
+	      strncpy(buf, *fp, sizeof(fp));
+	    }
+	  }
+	/*deal with server*/
+	server=gethostbyname(argv[1]);
+	int portno = argv[2] ;
+	/*Make sure the server is there*/
+	if (server == NULL){
+		fprintf(stderr,"ERROR, no such host");
+		exit(0);
+	}
+	
+	else if{
+	 
+		/*Build the socket*/
+		sruct sockaddr_in si_server; 
+		/*Sets the feilds in si_server*/
+		bzero((char *) &si_server, sizeof(si_server));
+		/*symbolic constant that gets the address AN-INET*/
+		si_server.sin_family = AN_INET;
+		bcopy((char *) server->h_addr,(char *) &si_server.sin_addr,server->h_length);
+		serv_addr.sin_port = htons(portno);
+
+		/* Open a socket*/
+		/*domain, type, protocol */
+		int sockfd =socket(PF_INET, SOCK_DGRAM, 0);
+			if(sockfd <0)
+				error("ERROR opening socket try later");
+		/*USER Send data to server*/
+			size_t lenserver=0;
+			lenserver=sizeof(&si_server);
+
+			n= sendto(sockfd,buf,BUFLEN, 0, (struct sockaddr *) &si_server,lenserver);
+		if (n<0){
+			error("sendto");
+			fclose(fp);
+		
+}
